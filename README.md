@@ -18,4 +18,7 @@ def f(a,*,b):
     return a,b
 f(2,b=1)  #2,1
 ```
+#####cp7
+######closures
+A closure is a function with an extended scope that encompasses nonglobal variables referenced in the body of the function but not defined there.
 
