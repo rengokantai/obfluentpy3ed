@@ -22,3 +22,13 @@ f(2,b=1)  #2,1
 ######closures
 A closure is a function with an extended scope that encompasses nonglobal variables referenced in the body of the function but not defined there.
 
+#####cp14
+######A Closer Look at the iter Function
+using iter() in readlines
+```
+with open('mydata.txt') as fp:
+        for line in iter(fp.readline, '\n'):
+            process_line(line)
+```
+#####cp15
+with blocks don’t define a new scope, as functions and modules do.
