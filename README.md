@@ -32,3 +32,18 @@ with open('mydata.txt') as fp:
 ```
 #####cp15
 with blocks don’t define a new scope, as functions and modules do.
+######cp16
+equivalent
+```
+ def gen():
+    for c in 'AB':
+        yield c
+    for i in range(1, 3):
+        yield i
+```
+```
+def gen():
+    yield from 'AB'
+    yield from range(1, 3)
+...
+```
