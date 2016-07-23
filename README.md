@@ -43,6 +43,12 @@ def __format__(self, fmt_spec=''):
     components = (format(c, fmt_spec) for c in self) #formatted single item
     return '({}, {})'.format(*components)   #format of formats
 ```
+use repr in subclass
+```
+def __repr__(self):
+    class_name = type(self).__name__
+    return '{}({!r}, {!r})'.format(class_name, *self)
+```
 #####cp14
 ######A Closer Look at the iter Function
 using iter() in readlines
